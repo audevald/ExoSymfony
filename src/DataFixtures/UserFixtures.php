@@ -25,8 +25,6 @@ class UserFixtures extends Fixture
         $user = new User();
         $user->setUsername('demo');
         $user->setPassword($this->encoder->encodePassword($user, 'demo'));
-        // $product = new Product();
-        // $manager->persist($product);
         $manager->persist($user);
         $manager->flush();
     }
